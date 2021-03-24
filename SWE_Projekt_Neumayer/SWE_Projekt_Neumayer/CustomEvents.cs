@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyCode
+namespace SWE_Projekt_Neumayer
 {
     class CustomEvents:EventArgs
     {

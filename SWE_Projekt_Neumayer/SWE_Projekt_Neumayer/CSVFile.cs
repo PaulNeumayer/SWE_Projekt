@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
 
-namespace MyCode
+namespace SWE_Projekt_Neumayer
 {
     class CSVFile
     {

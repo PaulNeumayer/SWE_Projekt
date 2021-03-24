@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MyCode
+namespace SWE_Projekt_Neumayer
 {
     public partial class MainForm : Form
     {
