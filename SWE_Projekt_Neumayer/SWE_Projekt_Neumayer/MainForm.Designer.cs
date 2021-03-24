@@ -1,4 +1,4 @@
-﻿namespace MyCode
+﻿namespace SWE_Projekt_Neumayer
 {
     partial class MainForm
     {

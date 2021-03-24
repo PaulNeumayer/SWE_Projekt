@@ -14,6 +14,7 @@ namespace SWE_Projekt_Neumayer
         [STAThread]
         static void Main()
         {
+            //Test Bearbeitung 15:21 Uhr
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Mit Main Form ersetzt Line 37

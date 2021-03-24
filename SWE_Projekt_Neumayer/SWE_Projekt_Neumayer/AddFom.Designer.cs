@@ -59,7 +59,7 @@ namespace SWE_Projekt_Neumayer
             // 
             this.textBox5.Enabled = false;
             this.textBox5.Location = new System.Drawing.Point(264, 297);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(132, 22);
             this.textBox5.TabIndex = 22;
@@ -107,7 +107,7 @@ namespace SWE_Projekt_Neumayer
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(264, 190);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(132, 22);
             this.textBox4.TabIndex = 17;
@@ -115,7 +115,7 @@ namespace SWE_Projekt_Neumayer
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(264, 138);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(132, 22);
             this.textBox3.TabIndex = 16;
@@ -123,7 +123,7 @@ namespace SWE_Projekt_Neumayer
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(264, 86);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(132, 22);
             this.textBox2.TabIndex = 15;
@@ -131,8 +131,8 @@ namespace SWE_Projekt_Neumayer
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(360, 33);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Location = new System.Drawing.Point(264, 35);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(132, 22);
             this.textBox1.TabIndex = 14;
@@ -140,7 +140,7 @@ namespace SWE_Projekt_Neumayer
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(463, 364);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 13;
@@ -150,7 +150,7 @@ namespace SWE_Projekt_Neumayer
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(19, 364);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 12;
@@ -171,7 +171,7 @@ namespace SWE_Projekt_Neumayer
             // 
             this.textBox6.Enabled = false;
             this.textBox6.Location = new System.Drawing.Point(264, 245);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(132, 22);
             this.textBox6.TabIndex = 24;
@@ -195,7 +195,7 @@ namespace SWE_Projekt_Neumayer
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddFom";
             this.Text = "Add";
             this.ResumeLayout(false);
