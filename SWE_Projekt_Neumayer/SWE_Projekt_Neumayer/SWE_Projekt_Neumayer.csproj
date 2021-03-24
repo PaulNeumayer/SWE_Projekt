@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CSVFile.cs" />
+    <Compile Include="CustomerDataList.cs" />
+    <Compile Include="CustomerDataObj.cs" />
+    <Compile Include="CustomEvents.cs" />
     <Compile Include="EditForm.cs">
       <SubType>Form</SubType>
     </Compile>
