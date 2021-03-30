@@ -25,5 +25,10 @@ namespace SWE_Projekt_Neumayer
             myDate = Customer[5];
         }
 
+        public override String ToString()
+        {
+            return firstName + " " + lastName;
+        }
+
     }
 }

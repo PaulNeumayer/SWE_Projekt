@@ -16,5 +16,10 @@ namespace SWE_Projekt_Neumayer
         {
             InitializeComponent();
         }
+
+        private void AddFom_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

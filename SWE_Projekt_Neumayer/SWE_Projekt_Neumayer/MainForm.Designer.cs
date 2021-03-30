@@ -40,9 +40,10 @@
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(94, 52);
+            this.buttonAdd.Location = new System.Drawing.Point(70, 42);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(129, 40);
+            this.buttonAdd.Size = new System.Drawing.Size(97, 32);
             this.buttonAdd.TabIndex = 0;
             this.buttonAdd.Text = "ADD";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -50,18 +51,20 @@
             // 
             // buttonMoney
             // 
-            this.buttonMoney.Location = new System.Drawing.Point(342, 52);
+            this.buttonMoney.Location = new System.Drawing.Point(256, 42);
+            this.buttonMoney.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonMoney.Name = "buttonMoney";
-            this.buttonMoney.Size = new System.Drawing.Size(129, 40);
+            this.buttonMoney.Size = new System.Drawing.Size(97, 32);
             this.buttonMoney.TabIndex = 1;
             this.buttonMoney.Text = "MONEY";
             this.buttonMoney.UseVisualStyleBackColor = true;
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(586, 52);
+            this.buttonEdit.Location = new System.Drawing.Point(440, 42);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(129, 40);
+            this.buttonEdit.Size = new System.Drawing.Size(97, 32);
             this.buttonEdit.TabIndex = 2;
             this.buttonEdit.Text = "EDIT";
             this.buttonEdit.UseCompatibleTextRendering = true;
@@ -69,26 +72,28 @@
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(481, 405);
+            this.textBoxSearch.Location = new System.Drawing.Point(361, 329);
+            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(159, 22);
+            this.textBoxSearch.Size = new System.Drawing.Size(120, 20);
             this.textBoxSearch.TabIndex = 3;
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(94, 235);
+            this.listBox1.Location = new System.Drawing.Point(11, 191);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(282, 164);
+            this.listBox1.Size = new System.Drawing.Size(346, 134);
             this.listBox1.TabIndex = 5;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // openFile
             // 
-            this.openFile.Location = new System.Drawing.Point(587, 161);
+            this.openFile.Location = new System.Drawing.Point(440, 131);
+            this.openFile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.openFile.Name = "openFile";
-            this.openFile.Size = new System.Drawing.Size(128, 23);
+            this.openFile.Size = new System.Drawing.Size(96, 19);
             this.openFile.TabIndex = 6;
             this.openFile.Tag = "OpenFile";
             this.openFile.Text = "OPEN FILE";
@@ -97,9 +102,10 @@
             // 
             // buttonSearch
             // 
-            this.buttonSearch.Location = new System.Drawing.Point(661, 405);
+            this.buttonSearch.Location = new System.Drawing.Point(496, 329);
+            this.buttonSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearch.Size = new System.Drawing.Size(56, 19);
             this.buttonSearch.TabIndex = 7;
             this.buttonSearch.Text = "Search";
             this.buttonSearch.UseVisualStyleBackColor = true;
@@ -108,17 +114,17 @@
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(481, 235);
+            this.listBox2.Location = new System.Drawing.Point(361, 191);
+            this.listBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(280, 164);
+            this.listBox2.Size = new System.Drawing.Size(211, 134);
             this.listBox2.TabIndex = 8;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.openFile);
@@ -127,6 +133,7 @@
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonMoney);
             this.Controls.Add(this.buttonAdd);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainForm";
             this.Tag = "OpenFile";
             this.Text = "MainForm";

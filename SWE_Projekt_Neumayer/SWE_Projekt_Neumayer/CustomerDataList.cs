@@ -28,7 +28,7 @@ namespace SWE_Projekt_Neumayer
             string[] Temp = new string[6];
             for (int k = 1; k < Data.GetLength(0); k++)
             {
-                for (int i = 0; i < Temp.Length; i++)
+                for (int i = 0; i < Temp.Length-1; i++)
                 {
                     Temp[i] = Data[k, i];
                 }

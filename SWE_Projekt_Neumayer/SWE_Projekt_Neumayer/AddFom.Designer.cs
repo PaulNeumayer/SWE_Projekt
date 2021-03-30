@@ -198,6 +198,7 @@ namespace SWE_Projekt_Neumayer
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddFom";
             this.Text = "Add";
+            this.Load += new System.EventHandler(this.AddFom_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
