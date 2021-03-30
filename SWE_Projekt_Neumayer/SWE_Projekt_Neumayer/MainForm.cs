@@ -48,6 +48,12 @@ namespace SWE_Projekt_Neumayer
                 }
         }
 
+        public void RefreshList(object sender, EventArgs args)
+        {
+            listBox1.DataSource = null;
+            listBox1.DataSource = LF.Customers;
+        }
+
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -62,6 +68,18 @@ namespace SWE_Projekt_Neumayer
         {
             string filter = textBoxSearch.Text;
             RefreshList2(this, new CustomEvents(filter));
+        }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OnEditRequested(this, new CustomEvents((CustomerDataObj)listBox1.SelectedItem));
+            }
+            catch
+            {
+                MessageBox.Show("Keine Daten Geladen");
+            }
         }
     }
 }

@@ -41,7 +41,7 @@
             // buttonAdd
             // 
             this.buttonAdd.Location = new System.Drawing.Point(70, 42);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(97, 32);
             this.buttonAdd.TabIndex = 0;
@@ -52,7 +52,7 @@
             // buttonMoney
             // 
             this.buttonMoney.Location = new System.Drawing.Point(256, 42);
-            this.buttonMoney.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonMoney.Margin = new System.Windows.Forms.Padding(2);
             this.buttonMoney.Name = "buttonMoney";
             this.buttonMoney.Size = new System.Drawing.Size(97, 32);
             this.buttonMoney.TabIndex = 1;
@@ -62,18 +62,19 @@
             // buttonEdit
             // 
             this.buttonEdit.Location = new System.Drawing.Point(440, 42);
-            this.buttonEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(2);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(97, 32);
             this.buttonEdit.TabIndex = 2;
             this.buttonEdit.Text = "EDIT";
             this.buttonEdit.UseCompatibleTextRendering = true;
             this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // textBoxSearch
             // 
             this.textBoxSearch.Location = new System.Drawing.Point(361, 329);
-            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(120, 20);
             this.textBoxSearch.TabIndex = 3;
@@ -82,7 +83,7 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(11, 191);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(2);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(346, 134);
             this.listBox1.TabIndex = 5;
@@ -91,7 +92,7 @@
             // openFile
             // 
             this.openFile.Location = new System.Drawing.Point(440, 131);
-            this.openFile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.openFile.Margin = new System.Windows.Forms.Padding(2);
             this.openFile.Name = "openFile";
             this.openFile.Size = new System.Drawing.Size(96, 19);
             this.openFile.TabIndex = 6;
@@ -103,7 +104,7 @@
             // buttonSearch
             // 
             this.buttonSearch.Location = new System.Drawing.Point(496, 329);
-            this.buttonSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSearch.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(56, 19);
             this.buttonSearch.TabIndex = 7;
@@ -115,7 +116,7 @@
             // 
             this.listBox2.FormattingEnabled = true;
             this.listBox2.Location = new System.Drawing.Point(361, 191);
-            this.listBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBox2.Margin = new System.Windows.Forms.Padding(2);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(211, 134);
             this.listBox2.TabIndex = 8;
@@ -133,7 +134,7 @@
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonMoney);
             this.Controls.Add(this.buttonAdd);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.Tag = "OpenFile";
             this.Text = "MainForm";

@@ -169,6 +169,7 @@ namespace SWE_Projekt_Neumayer
             this.Controls.Add(this.button1);
             this.Name = "EditForm";
             this.Text = "Edit";
+            this.Load += new System.EventHandler(this.EditForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

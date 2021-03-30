@@ -38,5 +38,7 @@ namespace SWE_Projekt_Neumayer
             }
             OnListRequested(this, new CustomEvents(Customers));
         }
+
+        
     }
 }

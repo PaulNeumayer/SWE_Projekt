@@ -12,6 +12,9 @@ namespace SWE_Projekt_Neumayer
 {
     public partial class EditForm : Form
     {
+        CustomEvents Customer;
+        public event EventHandler OnRefreshListRequested;
+
         public EditForm()
         {
             InitializeComponent();
@@ -19,15 +22,15 @@ namespace SWE_Projekt_Neumayer
 
         public void loadPerson(object sender, EventArgs args)
         {
-            /*
-            Person = (CustomEvents)args;
-            textBox1.Text = Person.Person.ID;
-            textBox2.Text = Person.Person.Email;
-            textBox3.Text = Person.Person.Vorname;
-            textBox4.Text = Person.Person.Nachname;
-            textBox5.Text = Person.Person.DateofChange;
+            
+            Customer = (CustomEvents)args;
+            textBox1.Text = Customer.CustomerDataObj.iD;
+            textBox2.Text = Customer.CustomerDataObj.eMail;
+            textBox3.Text = Customer.CustomerDataObj.firstName;
+            textBox4.Text = Customer.CustomerDataObj.lastName;
+            textBox5.Text = Customer.CustomerDataObj.myDate;
             this.Show();
-            */
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -57,15 +60,20 @@ namespace SWE_Projekt_Neumayer
 
         private void button2_Click(object sender, EventArgs e)
         {
-            /*
-            Person.Person.Vorname = textBox1.Text;
-            Person.Person.Nachname = textBox2.Text;
-            Person.Person.Geschlecht = textBox3.Text;
-            Person.Person.Alter = textBox4.Text;
-            Person.Person.Studiengang = textBox5.Text;
+            var UpDate = DateTime.Now.Date.ToString("dd.MM.yyyy");
+            Customer.CustomerDataObj.iD = textBox1.Text;
+            Customer.CustomerDataObj.eMail = textBox2.Text;
+            Customer.CustomerDataObj.firstName = textBox3.Text;
+            Customer.CustomerDataObj.lastName = textBox4.Text;
+            Customer.CustomerDataObj.myDate = UpDate;
             this.Hide();
-            OnRefreshListRequested(this, new CustomEvents(Person.Person));
-            */
+            OnRefreshListRequested(this, new CustomEvents(Customer.CustomerDataObj));
+            
+        }
+
+        private void EditForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
