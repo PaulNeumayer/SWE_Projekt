@@ -16,6 +16,7 @@ namespace SWE_Projekt_Neumayer
         public event EventHandler OnEditRequested;
         public event EventHandler OnFileHanldingRequested;
         public event EventHandler RefreshList2;
+        public event EventHandler OnAddRequested;
 
         CustomEvents LF;
 
@@ -33,6 +34,7 @@ namespace SWE_Projekt_Neumayer
         private void buttonAdd_Click(object sender, EventArgs e)
         {
 
+            OnAddRequested(this, e);
         }
 
         public void ListView(object sender, EventArgs arg)

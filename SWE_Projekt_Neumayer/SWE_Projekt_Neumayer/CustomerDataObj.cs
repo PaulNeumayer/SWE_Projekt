@@ -8,6 +8,7 @@ namespace SWE_Projekt_Neumayer
 {
     public class CustomerDataObj
     {
+        
         public string firstName = string.Empty;
         public string lastName = string.Empty;
         public string iD = string.Empty;
@@ -15,14 +16,20 @@ namespace SWE_Projekt_Neumayer
         public string balance = string.Empty;
         public string myDate = string.Empty;
 
+        public static int count = 0;
+
         public CustomerDataObj(string[] Customer)
         {
+            
             firstName = Customer[0];
             lastName = Customer[1];
             iD = Customer[2];
             eMail = Customer[3];
             balance = Customer[4];
             myDate = Customer[5];
+
+            count = count + 1;
+
         }
 
         public override String ToString()
