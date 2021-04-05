@@ -30,7 +30,7 @@ namespace SWE_Projekt_Neumayer
             textBox4.Text = Customer.CustomerDataObj.lastName;
             textBox5.Text = Customer.CustomerDataObj.myDate;
             this.Show();
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

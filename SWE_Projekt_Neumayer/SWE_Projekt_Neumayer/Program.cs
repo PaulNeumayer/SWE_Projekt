@@ -24,12 +24,15 @@ namespace SWE_Projekt_Neumayer
             CSVFile CSVFile = new CSVFile();
             CustomerDataList CustomerDataList = new CustomerDataList();
             EditForm EditorForm = new EditForm();
+            AddForm AddForm = new AddForm();
 
             //Methode an Eventhändler anschließen
             MainForm.OnFileHanldingRequested += new EventHandler(CSVFile.FileHandler);
             CSVFile.OnFileInputRequested += new EventHandler(CustomerDataList.CustomerListHandler);
             MainForm.OnEditRequested += new EventHandler(EditorForm.loadPerson);
             CustomerDataList.OnListRequested += new EventHandler(MainForm.ListView);
+            MainForm.OnAddRequested += new EventHandler(AddForm.addPerson);
+            AddForm.OnRefreshListRequested += new EventHandler(MainForm.RefreshList);
             EditorForm.OnRefreshListRequested += new EventHandler(MainForm.RefreshList);
             MainForm.RefreshList2 += new EventHandler(MainForm.ListView);
 
