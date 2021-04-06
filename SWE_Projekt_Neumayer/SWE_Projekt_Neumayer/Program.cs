@@ -25,6 +25,7 @@ namespace SWE_Projekt_Neumayer
             CustomerDataList CustomerDataList = new CustomerDataList();
             EditForm EditorForm = new EditForm();
             AddForm AddForm = new AddForm();
+            MoneyForm MoneyForm = new MoneyForm();
 
             //Methode an Eventhändler anschließen
             MainForm.OnFileHanldingRequested += new EventHandler(CSVFile.FileHandler);
@@ -34,7 +35,10 @@ namespace SWE_Projekt_Neumayer
             MainForm.OnAddRequested += new EventHandler(AddForm.addPerson);
             AddForm.OnRefreshListRequested += new EventHandler(MainForm.RefreshList);
             EditorForm.OnRefreshListRequested += new EventHandler(MainForm.RefreshList);
+            MoneyForm.OnRefreshListRequested += new EventHandler(MainForm.RefreshList);
             MainForm.RefreshList2 += new EventHandler(MainForm.ListView);
+            MainForm.OnMoneyRequested += new EventHandler(MoneyForm.loadPerson);
+            MainForm.OnFileSavingRequested += new EventHandler(MainForm.WriteListToCSV);
 
             Application.Run(MainForm);
         }

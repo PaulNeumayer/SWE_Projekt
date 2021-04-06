@@ -36,6 +36,7 @@
             this.openFile = new System.Windows.Forms.Button();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.listBox2 = new System.Windows.Forms.ListBox();
+            this.button_saveFile = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonAdd
@@ -58,6 +59,7 @@
             this.buttonMoney.TabIndex = 1;
             this.buttonMoney.Text = "MONEY";
             this.buttonMoney.UseVisualStyleBackColor = true;
+            this.buttonMoney.Click += new System.EventHandler(this.buttonMoney_Click);
             // 
             // buttonEdit
             // 
@@ -121,11 +123,24 @@
             this.listBox2.Size = new System.Drawing.Size(211, 134);
             this.listBox2.TabIndex = 8;
             // 
+            // button_saveFile
+            // 
+            this.button_saveFile.Location = new System.Drawing.Point(440, 154);
+            this.button_saveFile.Margin = new System.Windows.Forms.Padding(2);
+            this.button_saveFile.Name = "button_saveFile";
+            this.button_saveFile.Size = new System.Drawing.Size(96, 19);
+            this.button_saveFile.TabIndex = 9;
+            this.button_saveFile.Tag = "OpenFile";
+            this.button_saveFile.Text = "SAVE FILE";
+            this.button_saveFile.UseVisualStyleBackColor = true;
+            this.button_saveFile.Click += new System.EventHandler(this.button_saveFile_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.button_saveFile);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.openFile);
@@ -154,5 +169,6 @@
         private System.Windows.Forms.Button openFile;
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Button button_saveFile;
     }
 }
