@@ -14,7 +14,6 @@ namespace SWE_Projekt_Neumayer
     {
 
         CustomEvents Customer;
-        CustomEvents LF;
 
         public event EventHandler OnRefreshListRequested;
 

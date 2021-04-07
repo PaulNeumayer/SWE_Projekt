@@ -54,6 +54,19 @@ namespace SWE_Projekt_Neumayer
         public void RefreshList(object sender, EventArgs args)
         {
             listBox1.DataSource = null;
+            int idNr = 0;
+            for (int i =0; i < LF.Customers.Count; i++)
+            {
+                
+                if (!(LF.Customers[i].iD == "" || LF.Customers[i].iD == null))
+                {
+                    idNr = Int16.Parse(LF.Customers[i].iD); 
+                }
+                else
+                {
+                    LF.Customers[i].iD = (idNr + 1).ToString();
+                }
+            }
             listBox1.DataSource = LF.Customers;
         }
 
