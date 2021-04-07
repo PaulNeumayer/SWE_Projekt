@@ -37,5 +37,17 @@ namespace SWE_Projekt_Neumayer
             return firstName + " " + lastName;
         }
 
+        public string Save()
+        {
+            string Spliter = ";";
+            return
+                firstName + Spliter
+                + lastName + Spliter
+                + iD + Spliter
+                + eMail + Spliter
+                + balance + Spliter
+                + myDate;
+        }
+
     }
 }

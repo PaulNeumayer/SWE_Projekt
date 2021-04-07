@@ -9,6 +9,7 @@ namespace SWE_Projekt_Neumayer
     class CustomerDataList
     {
         public event EventHandler OnListRequested;
+        public event EventHandler OnAddCustomer;
         List<CustomerDataObj> Customers = new List<CustomerDataObj>();
 
         public CustomerDataList()
@@ -21,6 +22,15 @@ namespace SWE_Projekt_Neumayer
             CustomEvents ce = (CustomEvents)args;
 
             FillList(ce.Temp);
+        }
+
+        public void AddCustomerToList(object sender, EventArgs args)
+        {
+            string[] Temp = new string[6];
+            CustomerDataObj Customer = new CustomerDataObj(Temp);
+            Customers.Add(Customer);
+
+            OnAddCustomer(this, new CustomEvents(Customer));
         }
 
         private void FillList(String[,] Data)

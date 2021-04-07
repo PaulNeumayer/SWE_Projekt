@@ -32,13 +32,14 @@ namespace SWE_Projekt_Neumayer
             CSVFile.OnFileInputRequested += new EventHandler(CustomerDataList.CustomerListHandler);
             MainForm.OnEditRequested += new EventHandler(EditorForm.loadPerson);
             CustomerDataList.OnListRequested += new EventHandler(MainForm.ListView);
-            MainForm.OnAddRequested += new EventHandler(AddForm.addPerson);
             AddForm.OnRefreshListRequested += new EventHandler(MainForm.RefreshList);
             EditorForm.OnRefreshListRequested += new EventHandler(MainForm.RefreshList);
             MoneyForm.OnRefreshListRequested += new EventHandler(MainForm.RefreshList);
             MainForm.RefreshList2 += new EventHandler(MainForm.ListView);
             MainForm.OnMoneyRequested += new EventHandler(MoneyForm.loadPerson);
-            MainForm.OnFileSavingRequested += new EventHandler(MainForm.WriteListToCSV);
+            MainForm.OnFileSavingRequested += new EventHandler(CSVFile.WriteListToCSV);
+            MainForm.OnAddCustomerRequested += new EventHandler(CustomerDataList.AddCustomerToList);
+            CustomerDataList.OnAddCustomer += new EventHandler(AddForm.addCustomer);
 
             Application.Run(MainForm);
         }

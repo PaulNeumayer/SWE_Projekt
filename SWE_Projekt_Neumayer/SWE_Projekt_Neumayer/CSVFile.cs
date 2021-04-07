@@ -46,6 +46,51 @@ namespace SWE_Projekt_Neumayer
             return Lines;
         }
 
+        public void WriteListToCSV(object sender, EventArgs args)
+        {
+
+            CustomEvents myCustomerList = (CustomEvents)args;
+            FileStream fos = File.OpenWrite(PathOpened);
+            StreamWriter streamWriter = new StreamWriter(fos);
+            string Spliter = ";";
+
+
+
+            streamWriter.WriteLine          //Für die erste Zeile in der Datei
+                (
+                "firstName" + Spliter
+                + "lastName" + Spliter
+                + "iD" + Spliter
+                + "eMail" + Spliter
+                + "balance" + Spliter
+                + "myDate"
+                );
+
+            foreach (CustomerDataObj Customer in myCustomerList.Customers) // für jedes Object der Liste
+            {
+                streamWriter.WriteLine(Customer.Save()); // Methode der Klasse Person in welcher reihenfolge abgespeichert wird
+            }
+
+            streamWriter.Close();
+
+
+            //LF = (CustomEvents)args;
+            //System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            //sb.AppendLine("firstName;LastName;iD;eMail;balance;myDate");
+            //foreach (var item in LF.Customers)
+            //{
+            //    sb.AppendLine(LF.CustomerDataObj.firstName + LF.CustomerDataObj.lastName + LF.CustomerDataObj.iD + LF.CustomerDataObj.eMail + LF.CustomerDataObj.balance + LF.CustomerDataObj.myDate);
+            //}
+
+            //Console.WriteLine(sb.ToString());
+            //System.IO.File.WriteAllText(
+            //    System.IO.Path.Combine(
+            //    AppDomain.CurrentDomain.BaseDirectory, "List1.csv"),
+            //    sb.ToString());
+            //Console.ReadLine();
+
+        }
+
         private string[] CreateCustomer(string Line)
         {
             char Split = ';';

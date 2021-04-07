@@ -14,6 +14,7 @@ namespace SWE_Projekt_Neumayer
     {
 
         CustomEvents Customer;
+        CustomEvents LF;
 
         public event EventHandler OnRefreshListRequested;
 
@@ -23,7 +24,7 @@ namespace SWE_Projekt_Neumayer
 
         }
 
-        public void addPerson(object sender, EventArgs args)
+        public void addCustomer(object sender, EventArgs args)
         {
 
             Customer = (CustomEvents)args;
@@ -89,12 +90,18 @@ namespace SWE_Projekt_Neumayer
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             //string[] arr = new string[6];
             //CustomerDataObj Customer = new CustomerDataObj(arr);
+            var UpDate = DateTime.Now.Date.ToString("dd.MM.yyyy");
             Customer.CustomerDataObj.eMail = textBox2.Text;
             Customer.CustomerDataObj.firstName = textBox3.Text;
             Customer.CustomerDataObj.lastName = textBox4.Text;
-            Customer.CustomerDataObj.myDate = textBox5.Text;
+            Customer.CustomerDataObj.myDate = UpDate;
+            Customer.CustomerDataObj.balance = "0";
+
+            //ID muss über LF Customers herausgefunden werden
+            
             this.Hide();
             OnRefreshListRequested(this, new CustomEvents(Customer.CustomerDataObj));
         }
