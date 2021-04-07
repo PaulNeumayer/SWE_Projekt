@@ -14,12 +14,13 @@ namespace SWE_Projekt_Neumayer
     {
         //Eventhandler zum Aufrufen des Editors
         public event EventHandler OnEditRequested;
+        public event EventHandler OnMoneyRequested;
         public event EventHandler OnFileHanldingRequested;
+        public event EventHandler OnFileSavingRequested;
         public event EventHandler RefreshList2;
         public event EventHandler OnAddRequested;
 
         CustomEvents LF;
-
 
         public MainForm()
         {
@@ -56,6 +57,26 @@ namespace SWE_Projekt_Neumayer
             listBox1.DataSource = LF.Customers;
         }
 
+        public void WriteListToCSV(object sender,EventArgs args)
+        {
+            LF = (CustomEvents)args;
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.AppendLine("firstName;LastName;iD;eMail;balance;myDate");
+            foreach (var item in LF.Customers)
+            {
+                sb.AppendLine(LF.CustomerDataObj.firstName + LF.CustomerDataObj.lastName + LF.CustomerDataObj.iD + LF.CustomerDataObj.eMail + LF.CustomerDataObj.balance + LF.CustomerDataObj.myDate);
+            }
+
+            Console.WriteLine(sb.ToString());
+            System.IO.File.WriteAllText(
+                System.IO.Path.Combine(
+                AppDomain.CurrentDomain.BaseDirectory, "List1.csv"),
+                sb.ToString());
+            Console.ReadLine();
+
+        }
+
+
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -82,6 +103,23 @@ namespace SWE_Projekt_Neumayer
             {
                 MessageBox.Show("Keine Daten Geladen");
             }
+        }
+
+        private void buttonMoney_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OnMoneyRequested(this, new CustomEvents((CustomerDataObj)listBox1.SelectedItem));
+            }
+            catch
+            {
+                MessageBox.Show("Keine Daten Geladen");
+            }
+        }
+
+        private void button_saveFile_Click(object sender, EventArgs e)
+        {
+            OnFileSavingRequested(this, new CustomEvents((CustomerDataObj)listBox1.SelectedItem));
         }
     }
 }

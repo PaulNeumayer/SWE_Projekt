@@ -12,9 +12,25 @@ namespace SWE_Projekt_Neumayer
 {
     public partial class MoneyForm : Form
     {
+        CustomEvents Customer;
+        public event EventHandler OnRefreshListRequested;
+
         public MoneyForm()
         {
             InitializeComponent();
+        }
+
+        public void loadPerson(object sender, EventArgs args)
+        {
+
+            Customer = (CustomEvents)args;
+            textBox1.Text = Customer.CustomerDataObj.iD;
+            textBox2.Text = Customer.CustomerDataObj.eMail;
+            textBox3.Text = Customer.CustomerDataObj.firstName;
+            textBox4.Text = Customer.CustomerDataObj.lastName;
+            textBox6.Text = Customer.CustomerDataObj.balance;
+            this.Show();
+
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -23,6 +39,62 @@ namespace SWE_Projekt_Neumayer
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e) //ok
+        {
+            this.Close();
+        }
+
+        private void button_MoneyCancel_Click(object sender, EventArgs e) //cancel
+        {
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e) //plus
+        {
+            int input=check_sum(textBox_sum.Text);
+                        
+            Customer.CustomerDataObj.balance = (Int32.Parse(Customer.CustomerDataObj.balance) + input).ToString();  // add balance with input & check input
+
+            var UpDate = DateTime.Now.Date.ToString("dd.MM.yyyy");
+            Customer.CustomerDataObj.myDate = UpDate;
+
+            OnRefreshListRequested(this, new CustomEvents(Customer.CustomerDataObj));
+        }
+
+        private void button_MoneyMinus_Click(object sender, EventArgs e) //minus
+        {
+            int input = check_sum(textBox_sum.Text);
+
+            Customer.CustomerDataObj.balance = (Int32.Parse(Customer.CustomerDataObj.balance) - input).ToString();  // add balance with input & check input
+
+            var UpDate = DateTime.Now.Date.ToString("dd.MM.yyyy");
+            Customer.CustomerDataObj.myDate = UpDate;
+
+            OnRefreshListRequested(this, new CustomEvents(Customer.CustomerDataObj));
+        }
+
+        private int check_sum(string input)
+        {
+            int result = 0;
+
+            try
+            {
+                result = Int32.Parse(input);
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine($"Unable to parse '{input}'");
+            }
+            // Output: Unable to parse ''
+
+            return result;
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
         {
 
         }

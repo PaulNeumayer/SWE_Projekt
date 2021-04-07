@@ -39,12 +39,12 @@ namespace SWE_Projekt_Neumayer
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.button_MoneyOk = new System.Windows.Forms.Button();
+            this.button_MoneyCancel = new System.Windows.Forms.Button();
+            this.button_MoneyPlus = new System.Windows.Forms.Button();
+            this.button_MoneyMinus = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox_sum = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label5
@@ -63,6 +63,7 @@ namespace SWE_Projekt_Neumayer
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(100, 20);
             this.textBox6.TabIndex = 38;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label3
             // 
@@ -133,41 +134,45 @@ namespace SWE_Projekt_Neumayer
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 28;
             // 
-            // button2
+            // button_MoneyOk
             // 
-            this.button2.Location = new System.Drawing.Point(265, 369);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "ok";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button_MoneyOk.Location = new System.Drawing.Point(265, 369);
+            this.button_MoneyOk.Name = "button_MoneyOk";
+            this.button_MoneyOk.Size = new System.Drawing.Size(75, 23);
+            this.button_MoneyOk.TabIndex = 27;
+            this.button_MoneyOk.Text = "ok";
+            this.button_MoneyOk.UseVisualStyleBackColor = true;
+            this.button_MoneyOk.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // button_MoneyCancel
             // 
-            this.button1.Location = new System.Drawing.Point(25, 369);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "canel";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_MoneyCancel.Location = new System.Drawing.Point(25, 369);
+            this.button_MoneyCancel.Name = "button_MoneyCancel";
+            this.button_MoneyCancel.Size = new System.Drawing.Size(75, 23);
+            this.button_MoneyCancel.TabIndex = 26;
+            this.button_MoneyCancel.Text = "canel";
+            this.button_MoneyCancel.UseVisualStyleBackColor = true;
+            this.button_MoneyCancel.Click += new System.EventHandler(this.button_MoneyCancel_Click);
             // 
-            // button3
+            // button_MoneyPlus
             // 
-            this.button3.Location = new System.Drawing.Point(152, 301);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(31, 23);
-            this.button3.TabIndex = 40;
-            this.button3.Text = "+";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button_MoneyPlus.Location = new System.Drawing.Point(152, 301);
+            this.button_MoneyPlus.Name = "button_MoneyPlus";
+            this.button_MoneyPlus.Size = new System.Drawing.Size(31, 23);
+            this.button_MoneyPlus.TabIndex = 40;
+            this.button_MoneyPlus.Text = "+";
+            this.button_MoneyPlus.UseVisualStyleBackColor = true;
+            this.button_MoneyPlus.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // button_MoneyMinus
             // 
-            this.button4.Location = new System.Drawing.Point(200, 301);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(31, 23);
-            this.button4.TabIndex = 41;
-            this.button4.Text = "-";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button_MoneyMinus.Location = new System.Drawing.Point(200, 301);
+            this.button_MoneyMinus.Name = "button_MoneyMinus";
+            this.button_MoneyMinus.Size = new System.Drawing.Size(31, 23);
+            this.button_MoneyMinus.TabIndex = 41;
+            this.button_MoneyMinus.Text = "-";
+            this.button_MoneyMinus.UseVisualStyleBackColor = true;
+            this.button_MoneyMinus.Click += new System.EventHandler(this.button_MoneyMinus_Click);
             // 
             // label4
             // 
@@ -179,12 +184,12 @@ namespace SWE_Projekt_Neumayer
             this.label4.Text = "sum";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // textBox5
+            // textBox_sum
             // 
-            this.textBox5.Location = new System.Drawing.Point(143, 265);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 42;
+            this.textBox_sum.Location = new System.Drawing.Point(143, 265);
+            this.textBox_sum.Name = "textBox_sum";
+            this.textBox_sum.Size = new System.Drawing.Size(100, 20);
+            this.textBox_sum.TabIndex = 42;
             // 
             // MoneyForm
             // 
@@ -192,9 +197,9 @@ namespace SWE_Projekt_Neumayer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(358, 405);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.textBox_sum);
+            this.Controls.Add(this.button_MoneyMinus);
+            this.Controls.Add(this.button_MoneyPlus);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label3);
@@ -205,8 +210,8 @@ namespace SWE_Projekt_Neumayer
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_MoneyOk);
+            this.Controls.Add(this.button_MoneyCancel);
             this.Name = "MoneyForm";
             this.Text = "Money";
             this.ResumeLayout(false);
@@ -226,11 +231,11 @@ namespace SWE_Projekt_Neumayer
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button_MoneyOk;
+        private System.Windows.Forms.Button button_MoneyCancel;
+        private System.Windows.Forms.Button button_MoneyPlus;
+        private System.Windows.Forms.Button button_MoneyMinus;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox_sum;
     }
 }
