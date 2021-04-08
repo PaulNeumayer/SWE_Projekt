@@ -63,8 +63,6 @@ namespace SWE_Projekt_Neumayer
             Customer.CustomerDataObj.myDate = UpDate;
 
             OnRefreshListRequested(this, new CustomEvents(Customer.CustomerDataObj));
-
-            textBox6.Text = Customer.CustomerDataObj.balance;
         }
 
         private void button_MoneyMinus_Click(object sender, EventArgs e) //minus
@@ -75,10 +73,8 @@ namespace SWE_Projekt_Neumayer
 
             var UpDate = DateTime.Now.Date.ToString("dd.MM.yyyy");
             Customer.CustomerDataObj.myDate = UpDate;
-            
-            OnRefreshListRequested(this, new CustomEvents(Customer.CustomerDataObj));
 
-            textBox6.Text = Customer.CustomerDataObj.balance;
+            OnRefreshListRequested(this, new CustomEvents(Customer.CustomerDataObj));
         }
 
         private int check_sum(string input)
