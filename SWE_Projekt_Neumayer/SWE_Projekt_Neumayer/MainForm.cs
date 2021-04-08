@@ -85,8 +85,8 @@ namespace SWE_Projekt_Neumayer
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            string filter = textBoxSearch.Text;
-            RefreshList2(this, new CustomEvents(filter));
+            //string filter = textBoxSearch.Text;
+            //RefreshList2(this, new CustomEvents(filter));
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)

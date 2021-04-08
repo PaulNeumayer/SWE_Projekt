@@ -109,7 +109,7 @@ namespace SWE_Projekt_Neumayer
 
         private void buttonAddCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
         }
 
         private void label_Nr_Click(object sender, EventArgs e)

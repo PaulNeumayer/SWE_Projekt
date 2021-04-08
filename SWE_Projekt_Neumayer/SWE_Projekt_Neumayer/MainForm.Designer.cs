@@ -31,17 +31,14 @@
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonMoney = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
-            this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.openFile = new System.Windows.Forms.Button();
-            this.buttonSearch = new System.Windows.Forms.Button();
-            this.listBox2 = new System.Windows.Forms.ListBox();
             this.button_saveFile = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(70, 42);
+            this.buttonAdd.Location = new System.Drawing.Point(62, 124);
             this.buttonAdd.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(97, 32);
@@ -52,7 +49,7 @@
             // 
             // buttonMoney
             // 
-            this.buttonMoney.Location = new System.Drawing.Point(256, 42);
+            this.buttonMoney.Location = new System.Drawing.Point(248, 124);
             this.buttonMoney.Margin = new System.Windows.Forms.Padding(2);
             this.buttonMoney.Name = "buttonMoney";
             this.buttonMoney.Size = new System.Drawing.Size(97, 32);
@@ -63,7 +60,7 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(440, 42);
+            this.buttonEdit.Location = new System.Drawing.Point(432, 124);
             this.buttonEdit.Margin = new System.Windows.Forms.Padding(2);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(97, 32);
@@ -73,27 +70,19 @@
             this.buttonEdit.UseVisualStyleBackColor = true;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
-            // textBoxSearch
-            // 
-            this.textBoxSearch.Location = new System.Drawing.Point(361, 329);
-            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(120, 20);
-            this.textBoxSearch.TabIndex = 3;
-            // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(11, 191);
+            this.listBox1.Location = new System.Drawing.Point(51, 191);
             this.listBox1.Margin = new System.Windows.Forms.Padding(2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(346, 134);
+            this.listBox1.Size = new System.Drawing.Size(485, 134);
             this.listBox1.TabIndex = 5;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // openFile
             // 
-            this.openFile.Location = new System.Drawing.Point(440, 131);
+            this.openFile.Location = new System.Drawing.Point(51, 27);
             this.openFile.Margin = new System.Windows.Forms.Padding(2);
             this.openFile.Name = "openFile";
             this.openFile.Size = new System.Drawing.Size(96, 19);
@@ -103,29 +92,9 @@
             this.openFile.UseVisualStyleBackColor = true;
             this.openFile.Click += new System.EventHandler(this.openFile_Click);
             // 
-            // buttonSearch
-            // 
-            this.buttonSearch.Location = new System.Drawing.Point(496, 329);
-            this.buttonSearch.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(56, 19);
-            this.buttonSearch.TabIndex = 7;
-            this.buttonSearch.Text = "Search";
-            this.buttonSearch.UseVisualStyleBackColor = true;
-            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(361, 191);
-            this.listBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(211, 134);
-            this.listBox2.TabIndex = 8;
-            // 
             // button_saveFile
             // 
-            this.button_saveFile.Location = new System.Drawing.Point(440, 154);
+            this.button_saveFile.Location = new System.Drawing.Point(51, 60);
             this.button_saveFile.Margin = new System.Windows.Forms.Padding(2);
             this.button_saveFile.Name = "button_saveFile";
             this.button_saveFile.Size = new System.Drawing.Size(96, 19);
@@ -141,11 +110,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.button_saveFile);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.openFile);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonMoney);
             this.Controls.Add(this.buttonAdd);
@@ -155,7 +121,6 @@
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -164,11 +129,8 @@
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonMoney;
         private System.Windows.Forms.Button buttonEdit;
-        private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button openFile;
-        private System.Windows.Forms.Button buttonSearch;
-        private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Button button_saveFile;
     }
 }

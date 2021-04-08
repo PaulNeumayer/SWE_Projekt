@@ -35,7 +35,7 @@ namespace SWE_Projekt_Neumayer
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
         }
 
         private void label1_Click(object sender, EventArgs e)

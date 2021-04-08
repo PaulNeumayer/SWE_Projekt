@@ -45,12 +45,12 @@ namespace SWE_Projekt_Neumayer
 
         private void button2_Click(object sender, EventArgs e) //ok
         {
-            this.Close();
+            this.Hide();
         }
 
         private void button_MoneyCancel_Click(object sender, EventArgs e) //cancel
         {
-            this.Close();
+            this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e) //plus
@@ -62,7 +62,11 @@ namespace SWE_Projekt_Neumayer
             var UpDate = DateTime.Now.Date.ToString("dd.MM.yyyy");
             Customer.CustomerDataObj.myDate = UpDate;
 
+            textBox6.Text = Customer.CustomerDataObj.balance;
+
             OnRefreshListRequested(this, new CustomEvents(Customer.CustomerDataObj));
+
+            
         }
 
         private void button_MoneyMinus_Click(object sender, EventArgs e) //minus
@@ -73,6 +77,8 @@ namespace SWE_Projekt_Neumayer
 
             var UpDate = DateTime.Now.Date.ToString("dd.MM.yyyy");
             Customer.CustomerDataObj.myDate = UpDate;
+
+            textBox6.Text = Customer.CustomerDataObj.balance;
 
             OnRefreshListRequested(this, new CustomEvents(Customer.CustomerDataObj));
         }
