@@ -41,6 +41,7 @@ namespace SWE_Projekt_Neumayer
             MainForm.OnAddCustomerRequested += new EventHandler(CustomerDataList.AddCustomerToList);
             CustomerDataList.OnAddCustomer += new EventHandler(AddForm.addCustomer);
 
+
             Application.Run(MainForm);
         }
     }
