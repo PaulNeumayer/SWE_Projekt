@@ -45,14 +45,14 @@ namespace SWE_Projekt_Neumayer
             */
         }
 
-        public bool checkMailSpelling(string eMailAdress)
+        public void checkMailSpelling(string eMailAdress)
         {
 
 
 
             bool condition1 = (eMailAdress.Split('@').Length - 1 == 1);
 
-            bool condition2 = (eMailAdress.Split('@')[1].Split('.').Length > 1);
+            //bool condition2 = (eMailAdress.Split('@')[1].Split('.').Length > 1);
 
             bool condition3 = (eMailAdress.Split('.')[eMailAdress.Split('.').Length - 1].Length >= 2 && eMailAdress.Split('.')[eMailAdress.Split('.').Length - 1].Length <= 4);
 
@@ -67,9 +67,9 @@ namespace SWE_Projekt_Neumayer
                                 !eMailAdress.Contains('µ') && !eMailAdress.Contains('>'));
 
 
-            if (condition1 && condition2 && condition3 && condition4 && condition5 && condition6)
+            if (condition1 && /*condition2 &&*/ condition3 && condition4 && condition5 && condition6)
             {
-                return true;
+                //return true;
             }
 
             else 
@@ -93,7 +93,9 @@ namespace SWE_Projekt_Neumayer
             //string[] arr = new string[6];
             //CustomerDataObj Customer = new CustomerDataObj(arr);
             var UpDate = DateTime.Now.Date.ToString("dd.MM.yyyy");
+            checkMailSpelling(textBox2.Text);
             Customer.CustomerDataObj.eMail = textBox2.Text;
+            
             Customer.CustomerDataObj.firstName = textBox3.Text;
             Customer.CustomerDataObj.lastName = textBox4.Text;
             Customer.CustomerDataObj.myDate = UpDate;
