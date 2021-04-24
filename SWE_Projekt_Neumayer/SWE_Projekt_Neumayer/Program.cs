@@ -26,6 +26,7 @@ namespace SWE_Projekt_Neumayer
             EditForm EditorForm = new EditForm();
             AddForm AddForm = new AddForm();
             MoneyForm MoneyForm = new MoneyForm();
+            PasswordForm PasswordForm = new PasswordForm();
 
             //Methode an Eventhändler anschließen
             MainForm.OnFileHanldingRequested += new EventHandler(CSVFile.FileHandler);
@@ -40,9 +41,10 @@ namespace SWE_Projekt_Neumayer
             MainForm.OnFileSavingRequested += new EventHandler(CSVFile.WriteListToCSV);
             MainForm.OnAddCustomerRequested += new EventHandler(CustomerDataList.AddCustomerToList);
             CustomerDataList.OnAddCustomer += new EventHandler(AddForm.addCustomer);
+            PasswordForm.OnPasswordCorrect += new EventHandler(MainForm.openMain);
 
 
-            Application.Run(MainForm);
+            Application.Run(PasswordForm);
         }
     }
 }

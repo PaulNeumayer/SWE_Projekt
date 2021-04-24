@@ -117,5 +117,10 @@ namespace SWE_Projekt_Neumayer
         {
             OnFileSavingRequested(((Button)sender), LF);
         }
+
+        public void openMain(object sender, EventArgs e)
+        {
+            this.Show();
+        }
     }
 }
