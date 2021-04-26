@@ -63,7 +63,9 @@ namespace SWE_Projekt_Neumayer
                 + "iD" + Spliter
                 + "eMail" + Spliter
                 + "balance" + Spliter
-                + "myDate"
+                + "myDate" + Spliter
+                + "street" + Spliter
+                + "code"
                 );
 
             foreach (CustomerDataObj Customer in myCustomerList.Customers) // für jedes Object der Liste
@@ -89,6 +91,18 @@ namespace SWE_Projekt_Neumayer
             //    sb.ToString());
             //Console.ReadLine();
 
+        }
+
+        public void LogToCSV(object sender, EventArgs args)
+        {
+            DateTime localDate = DateTime.Now;
+
+            PathOpened = "C:\\Users\\lukas\\source\\repos\\SWEProj\\SWE_Projekt_Neumayer\\SWE_Projekt_Neumayer\\LogFile.csv";
+
+            StreamWriter streamWriterLog = new StreamWriter(PathOpened, append: true);
+            string Spliter = ";";
+            streamWriterLog.WriteLine(localDate + Spliter + " Deleted Person");
+            streamWriterLog.Close();
         }
 
         private string[] CreateCustomer(string Line)
@@ -127,15 +141,15 @@ namespace SWE_Projekt_Neumayer
         {
             string[] Data = FileRead();
 
-            string[,] SeperatedData = new string[FileRead().GetLength(0), 5];
-            string[] Temp = new string[5];
+            string[,] SeperatedData = new string[FileRead().GetLength(0), 8];
+            string[] Temp = new string[7];
 
 
             for (int i = 0; i < Data.GetLength(0); i++)
             {
                 Temp = CreateCustomer(Data[i]);
 
-                for (int k = 0; k < 5; k++)
+                for (int k = 0; k < 8; k++)
                 {
                     SeperatedData[i, k] = Temp[k];
                 }

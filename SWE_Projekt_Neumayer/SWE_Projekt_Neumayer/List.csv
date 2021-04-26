@@ -1,8 +1,3 @@
-firstName;lastName;iD;eMail;balance;myDate
-Max;Musterman;1;max.muster@gmail.com;1200;08.04.2021
-Lena;Heide;2;leni@gmx.at;2000;
-;;3;;;
-;;3;;;
-;;3;;;
-;;3;;;
-;;3;;;
+first name;last name;iD;eMail;balance;myDate;street;code
+Max;Musterman;1;max.muster@gmail.com;0;26.04.2021;Landstrasse 12;4050
+Lena;Heide;2;leni@gmx.at;2000;;Herrengasse 1;5043

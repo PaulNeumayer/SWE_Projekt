@@ -34,6 +34,7 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.openFile = new System.Windows.Forms.Button();
             this.button_saveFile = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonAdd
@@ -49,7 +50,7 @@
             // 
             // buttonMoney
             // 
-            this.buttonMoney.Location = new System.Drawing.Point(248, 124);
+            this.buttonMoney.Location = new System.Drawing.Point(306, 124);
             this.buttonMoney.Margin = new System.Windows.Forms.Padding(2);
             this.buttonMoney.Name = "buttonMoney";
             this.buttonMoney.Size = new System.Drawing.Size(97, 32);
@@ -104,11 +105,23 @@
             this.button_saveFile.UseVisualStyleBackColor = true;
             this.button_saveFile.Click += new System.EventHandler(this.button_saveFile_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(186, 124);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(97, 32);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "DELETE";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button_saveFile);
             this.Controls.Add(this.openFile);
             this.Controls.Add(this.listBox1);
@@ -132,5 +145,6 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button openFile;
         private System.Windows.Forms.Button button_saveFile;
+        private System.Windows.Forms.Button button1;
     }
 }

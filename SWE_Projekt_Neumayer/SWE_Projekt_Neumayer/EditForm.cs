@@ -29,6 +29,8 @@ namespace SWE_Projekt_Neumayer
             textBox3.Text = Customer.CustomerDataObj.firstName;
             textBox4.Text = Customer.CustomerDataObj.lastName;
             textBox5.Text = Customer.CustomerDataObj.myDate;
+            textBox6.Text = Customer.CustomerDataObj.street;
+            textBox7.Text = Customer.CustomerDataObj.code;
             this.Show();
             
         }
@@ -66,12 +68,19 @@ namespace SWE_Projekt_Neumayer
             Customer.CustomerDataObj.firstName = textBox3.Text;
             Customer.CustomerDataObj.lastName = textBox4.Text;
             Customer.CustomerDataObj.myDate = UpDate;
+            Customer.CustomerDataObj.street = textBox6.Text;
+            Customer.CustomerDataObj.code = textBox7.Text;
             this.Hide();
             OnRefreshListRequested(this, new CustomEvents(Customer.CustomerDataObj));
             
         }
 
         private void EditForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }

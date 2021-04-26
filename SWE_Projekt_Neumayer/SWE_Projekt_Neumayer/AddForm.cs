@@ -32,6 +32,8 @@ namespace SWE_Projekt_Neumayer
             textBox3.Text = Customer.CustomerDataObj.firstName;
             textBox4.Text = Customer.CustomerDataObj.lastName;
             textBox5.Text = Customer.CustomerDataObj.myDate;
+            textBox8.Text = Customer.CustomerDataObj.street;
+            textBox7.Text = Customer.CustomerDataObj.code;
             this.Show();
 
             /*
@@ -100,6 +102,8 @@ namespace SWE_Projekt_Neumayer
             Customer.CustomerDataObj.lastName = textBox4.Text;
             Customer.CustomerDataObj.myDate = UpDate;
             Customer.CustomerDataObj.balance = "0";
+            Customer.CustomerDataObj.street = textBox8.Text;
+            Customer.CustomerDataObj.code = textBox7.Text;
 
             //ID muss über LF Customers herausgefunden werden
             

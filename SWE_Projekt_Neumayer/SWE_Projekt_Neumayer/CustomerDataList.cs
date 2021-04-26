@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace SWE_Projekt_Neumayer
 {
+    
     class CustomerDataList
     {
+        CustomEvents Customer;
+
+
         public event EventHandler OnListRequested;
         public event EventHandler OnAddCustomer;
+        public event EventHandler OnRefreshListRequested;
+        public event EventHandler OnLogRequested;
         List<CustomerDataObj> Customers = new List<CustomerDataObj>();
 
         public CustomerDataList()
@@ -26,19 +32,29 @@ namespace SWE_Projekt_Neumayer
 
         public void AddCustomerToList(object sender, EventArgs args)
         {
-            string[] Temp = new string[6];
+            string[] Temp = new string[8];
             CustomerDataObj Customer = new CustomerDataObj(Temp);
             Customers.Add(Customer);
 
             OnAddCustomer(this, new CustomEvents(Customer));
         }
 
+        public void DelteCustomerFromList(object sender, EventArgs args)
+        {
+            Customer = (CustomEvents)args;
+            if (Int32.Parse(Customer.CustomerDataObj.balance) == 0)
+                Customers.Remove(Customer.CustomerDataObj);
+            OnLogRequested(sender, args);
+            //OnRefreshListRequested(this, new CustomEvents(Customer.CustomerDataObj));
+            //Error no object to pass
+        }
+
         private void FillList(String[,] Data)
         {
-            string[] Temp = new string[6];
+            string[] Temp = new string[8];
             for (int k = 1; k < Data.GetLength(0); k++)
             {
-                for (int i = 0; i < Temp.Length-1; i++)
+                for (int i = 0; i <= Temp.Length-1; i++)
                 {
                     Temp[i] = Data[k, i];
                 }

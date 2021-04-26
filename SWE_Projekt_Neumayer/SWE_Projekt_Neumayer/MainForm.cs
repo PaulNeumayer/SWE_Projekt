@@ -19,6 +19,7 @@ namespace SWE_Projekt_Neumayer
         public event EventHandler OnFileSavingRequested;
         public event EventHandler RefreshList2;
         public event EventHandler OnAddCustomerRequested;
+        public event EventHandler OnDeleteRequested;
 
         CustomEvents LF;
 
@@ -121,6 +122,18 @@ namespace SWE_Projekt_Neumayer
         public void openMain(object sender, EventArgs e)
         {
             this.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OnDeleteRequested(this, new CustomEvents((CustomerDataObj)listBox1.SelectedItem));
+            }
+            catch
+            {
+                MessageBox.Show("Keine Daten Geladen");
+            }
         }
     }
 }

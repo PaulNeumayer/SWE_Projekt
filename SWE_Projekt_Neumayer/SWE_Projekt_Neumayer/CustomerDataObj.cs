@@ -15,6 +15,8 @@ namespace SWE_Projekt_Neumayer
         public string eMail = string.Empty;
         public string balance = string.Empty;
         public string myDate = string.Empty;
+        public string street = string.Empty;
+        public string code = string.Empty;
 
         public static int count = 0;
 
@@ -27,6 +29,8 @@ namespace SWE_Projekt_Neumayer
             eMail = Customer[3];
             balance = Customer[4];
             myDate = Customer[5];
+            street = Customer[6];
+            code = Customer[7];
 
             count = count + 1;
 
@@ -46,7 +50,9 @@ namespace SWE_Projekt_Neumayer
                 + iD + Spliter
                 + eMail + Spliter
                 + balance + Spliter
-                + myDate;
+                + myDate + Spliter
+                + street + Spliter
+                + code;
         }
 
     }

@@ -43,6 +43,10 @@ namespace SWE_Projekt_Neumayer
             this.buttonAddCancel = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label4
@@ -130,7 +134,7 @@ namespace SWE_Projekt_Neumayer
             // 
             // buttonAddOk
             // 
-            this.buttonAddOk.Location = new System.Drawing.Point(347, 296);
+            this.buttonAddOk.Location = new System.Drawing.Point(350, 368);
             this.buttonAddOk.Name = "buttonAddOk";
             this.buttonAddOk.Size = new System.Drawing.Size(75, 23);
             this.buttonAddOk.TabIndex = 13;
@@ -140,7 +144,7 @@ namespace SWE_Projekt_Neumayer
             // 
             // buttonAddCancel
             // 
-            this.buttonAddCancel.Location = new System.Drawing.Point(14, 296);
+            this.buttonAddCancel.Location = new System.Drawing.Point(17, 368);
             this.buttonAddCancel.Name = "buttonAddCancel";
             this.buttonAddCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonAddCancel.TabIndex = 12;
@@ -165,11 +169,47 @@ namespace SWE_Projekt_Neumayer
             this.textBox6.Size = new System.Drawing.Size(100, 20);
             this.textBox6.TabIndex = 24;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(147, 317);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(47, 13);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "zip code";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(141, 282);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 13);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "street / nr";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(216, 314);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 20);
+            this.textBox7.TabIndex = 27;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(216, 279);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(100, 20);
+            this.textBox8.TabIndex = 26;
+            // 
             // AddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(452, 331);
+            this.ClientSize = new System.Drawing.Size(452, 408);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBox8);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label4);
@@ -208,5 +248,9 @@ namespace SWE_Projekt_Neumayer
         private System.Windows.Forms.Button buttonAddCancel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox8;
     }
 }
