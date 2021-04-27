@@ -110,6 +110,24 @@ namespace SWE_Projekt_Neumayer
             streamWriterLog.Close();
         }
 
+
+        public void LogToCSVPasswordwrong(object sender, EventArgs args)
+        {
+            DateTime localDate = DateTime.Now;
+
+            //PathOpened = "C:\\Users\\lukas\\source\\repos\\SWEProj\\SWE_Projekt_Neumayer\\SWE_Projekt_Neumayer\\LogFile.csv";
+
+            PathOpen.Filter = "(*.csv;)|";
+            PathOpen.ShowDialog();
+            PathOpened = PathOpen.FileName;
+
+
+            StreamWriter streamWriterLog = new StreamWriter(PathOpened, append: true);
+            string Spliter = ";";
+            streamWriterLog.WriteLine(localDate + Spliter + " 3 times wrong Password");
+            streamWriterLog.Close();
+        }
+
         private string[] CreateCustomer(string Line)
         {
             char Split = ';';

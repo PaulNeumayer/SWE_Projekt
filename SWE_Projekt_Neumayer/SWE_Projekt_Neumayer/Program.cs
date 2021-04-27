@@ -45,7 +45,7 @@ namespace SWE_Projekt_Neumayer
             MainForm.OnAddCustomerRequested += new EventHandler(CustomerDataList.AddCustomerToList);
             CustomerDataList.OnAddCustomer += new EventHandler(AddForm.addCustomer);
             PasswordForm.OnPasswordCorrect += new EventHandler(MainForm.openMain);
-
+            PasswordForm.OnLogRequestedPassword += new EventHandler(CSVFile.LogToCSVPasswordwrong);
 
             Application.Run(PasswordForm);
         }

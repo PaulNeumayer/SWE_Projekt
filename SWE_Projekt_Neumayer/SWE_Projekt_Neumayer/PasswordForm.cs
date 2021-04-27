@@ -18,6 +18,7 @@ namespace SWE_Projekt_Neumayer
         }
 
         public event EventHandler OnPasswordCorrect;
+        public event EventHandler OnLogRequestedPassword;
         int wrongPasswordCounter = 0;
 
         private void buttonAddOk_Click(object sender, EventArgs e)
@@ -45,8 +46,8 @@ namespace SWE_Projekt_Neumayer
             
                 if (wrongPasswordCounter==3)
                 {
-
-                    this.Close();
+                OnLogRequestedPassword(sender, e);
+                this.Close();
 
                 }
 
