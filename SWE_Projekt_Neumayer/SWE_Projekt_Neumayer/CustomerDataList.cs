@@ -16,6 +16,7 @@ namespace SWE_Projekt_Neumayer
         public event EventHandler OnAddCustomer;
         public event EventHandler OnRefreshListRequested;
         public event EventHandler OnLogRequested;
+        public event EventHandler OnDeleteRefreshRequested;
         List<CustomerDataObj> Customers = new List<CustomerDataObj>();
 
         public CustomerDataList()
@@ -45,6 +46,7 @@ namespace SWE_Projekt_Neumayer
             if (Int32.Parse(Customer.CustomerDataObj.balance) == 0)
                 Customers.Remove(Customer.CustomerDataObj);
             OnLogRequested(sender, args);
+            OnDeleteRefreshRequested(sender, args);
             //OnRefreshListRequested(this, new CustomEvents(Customers));
             //Error no object to pass
         }
