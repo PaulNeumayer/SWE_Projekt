@@ -45,7 +45,7 @@ namespace SWE_Projekt_Neumayer
             if (Int32.Parse(Customer.CustomerDataObj.balance) == 0)
                 Customers.Remove(Customer.CustomerDataObj);
             OnLogRequested(sender, args);
-            //OnRefreshListRequested(this, new CustomEvents(Customer.CustomerDataObj));
+            //OnRefreshListRequested(this, new CustomEvents(Customers));
             //Error no object to pass
         }
 

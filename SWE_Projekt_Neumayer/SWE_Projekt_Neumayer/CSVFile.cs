@@ -97,7 +97,12 @@ namespace SWE_Projekt_Neumayer
         {
             DateTime localDate = DateTime.Now;
 
-            PathOpened = "C:\\Users\\lukas\\source\\repos\\SWEProj\\SWE_Projekt_Neumayer\\SWE_Projekt_Neumayer\\LogFile.csv";
+            //PathOpened = "C:\\Users\\lukas\\source\\repos\\SWEProj\\SWE_Projekt_Neumayer\\SWE_Projekt_Neumayer\\LogFile.csv";
+
+            PathOpen.Filter = "(*.csv;)|";
+            PathOpen.ShowDialog();
+            PathOpened = PathOpen.FileName;
+
 
             StreamWriter streamWriterLog = new StreamWriter(PathOpened, append: true);
             string Spliter = ";";
